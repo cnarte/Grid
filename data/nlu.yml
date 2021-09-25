@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - yo
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +29,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +37,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +46,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +62,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,10 +78,63 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
+    - bad
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: show_credit_balance
+  examples: |
+    - hi flippy i want to know about my credit balance
+    - show account balance
+    - show me account balance
+- intent: order_status
+  examples: |
+    - Hi flippy what is the status of my last order
+    - what is my order status
+    - what's the update on my orders
+    - when my orders will be delivered?
+    - What is my order status?
+    - when will they get here
+    - I'd like to check the status of my order pls
+    - check status
+    - I'd like an update on my order
+    - Check status of my order
+    - I haven't received my order yet, can we check that?
+    - where is my order?
+    - I want to check the status of my order
+    - actually can I check the status of my order
+    - Hi what is the status of my orders?
+- intent: order_cancel
+  examples: |
+    - i'd like to cancel my order
+    - cancel my order
+    - I changed my mind on my order
+    - i want to cancel my orders
+- intent: order_product
+  examples: |
+    - i want to buy shoes
+    - hey, i want to purchase new shoes
+    - how about I place an order of shoes
+    - i want to buy a pair of shoes
+- intent: return
+  examples: |
+    - start a return
+    - I don't want my shoes anymore
+    - how do I return these?
+    - return some shoes
+    - Which items are available to return?
+    - Start a return
+    - Okay. I would like to return some shoes I bought
+    - yeah I want to return something
+    - hey i want to return my shoes
+- intent: faq/payment_methods
+  examples: |
+    - what kind of payment methods do you offer?
+    - how do I pay
+- intent: faq/promotions
+  examples: |
+    - what kind of deals do you have
+    - are you running anything for black friday

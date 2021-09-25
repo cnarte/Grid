@@ -11,3 +11,20 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+# to be implemented
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+
+- rule: help
+  steps:
+  - intent: help
+  - action: utter_help
