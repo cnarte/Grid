@@ -28,3 +28,9 @@ rules:
   steps:
   - intent: help
   - action: utter_help
+
+- rule: Provide handoff options
+  steps:
+  - intent: human_handoff
+  - action: utter_ask_handoff
+  - action: utter_handoff_options

@@ -46,7 +46,7 @@ stories:
   - intent: affirm
   - action: utter_order_cancel_finish
 
-- story: cancel_order_success
+- story: cancel_order_failure
   steps:
   - intent: order_status
   - action: utter_order_status
@@ -55,7 +55,7 @@ stories:
   - intent: deny
   - action: utter_happy
 
-- story: buy_products_success
+- story: buy_products # expand to add into cart or checkout the product
   steps:
   - intent: order_product
   - action: utter_order_shoes
@@ -66,3 +66,14 @@ stories:
   - action: utter_return_confirm
   - intent: affirm
   - action: utter_return_finish
+
+- story: return_product_failure
+  steps:
+  - intent: return
+  - action: utter_return_confirm
+  - intent: deny
+  - action: utter_happy
+
+# search in list of faq questions (not implemented)
+# - story: search_faq
+

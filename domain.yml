@@ -19,6 +19,7 @@ intents:
 - nlu_fallback
 - help
 - show_credit_balance
+- human_handoff
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -58,6 +59,10 @@ responses:
   - text: Sorry for the inconvenience! Are you sure you want to return the product?
   utter_return_finish:
   - text: Ok, I've kicked off your return. You should be receiving your refund within 7 days and our wish master will pickup the order soon.
+  utter_ask_handoff:
+  - text: It looks like you want to be transferred to a human agent.
+  utter_handoff_options:
+  - text: You can call our customer care representative at 18002029898 or visit https://www.flipkart.com/helpcentre
 actions:
 - utter_faq
 - utter_greet
