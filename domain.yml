@@ -3,10 +3,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- return
+- credit_card_info
 - affirm
-- faq:
-    is_retrieval_intent: true
+- return
 - order_product
 - order_cancel
 - order_status
@@ -20,6 +19,8 @@ intents:
 - help
 - show_credit_balance
 - human_handoff
+- credit_card_options
+- due_credit_card_bills
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -63,9 +64,23 @@ responses:
   - text: It looks like you want to be transferred to a human agent.
   utter_handoff_options:
   - text: You can call our customer care representative at 18002029898 or visit https://www.flipkart.com/helpcentre
+  utter_credit_promotion:
+  - text: |-
+      You should definitely get a credit card, The discounts, offers, and deals that a credit card offers are unmatched by any other financial products and spell a bonanza for the wise user.
+      Here are some of the advantages of using a credit card:
+      - By using credit card you get to use it now and pay for your purchases later.
+      - Banks and financial institutions often look to credit card usage as a way to gauge a potential loan applicant’s creditworthiness.
+      - Credit cards come packed with offers and incentives to use your card. These range from cash back to rewards point accumulation each time you swipe your card, which can later be redeemed as air miles or used towards paying your outstanding card dues. Lenders also offer discounts on purchases made through a credit card, such as on flight tickets, holidays or large purchases, helping you save.
+      - Credit cards offer additional protection in the form of insurance for card purchases that might be lost, damaged or stolen.
+  utter_credit_success_forward:
+  - text: Great, please follow this link to get your Flipkart Axis Bank Credit Card today. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
+  utter_credit_unsuccessful:
+  - text: Ok maybe some another time.
+
 actions:
-- utter_faq
+- utter_credit_promotion
 - utter_greet
+- utter_happy
 - utter_help
 - utter_order_cancel_confirm
 - utter_order_cancel_finish

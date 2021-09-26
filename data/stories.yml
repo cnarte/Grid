@@ -77,3 +77,18 @@ stories:
 # search in list of faq questions (not implemented)
 # - story: search_faq
 
+
+- story: credit_card_successful_sell
+  steps:
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: affirm
+  - action: utter_credit_success_forward
+
+- story: credit_card_unsuccessful_sell
+  steps:
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: deny
+  - action: utter_credit_unsuccessful
+

@@ -37,6 +37,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok i would love to get one
 - intent: deny
   examples: |
     - no
@@ -130,14 +131,6 @@ nlu:
     - Okay. I would like to return some shoes I bought
     - yeah I want to return something
     - hey i want to return my shoes
-- intent: faq/payment_methods
-  examples: |
-    - what kind of payment methods do you offer?
-    - how do I pay
-- intent: faq/promotions
-  examples: |
-    - what kind of deals do you have
-    - are you running anything for black friday
 - intent: help
   examples: |
     - help
@@ -156,8 +149,6 @@ nlu:
     - come back
     - cool! can I do something else here?
     - hello what can you do for me
-    - help
-    - help me
     - help please
     - help pls
     - help?
@@ -180,7 +171,6 @@ nlu:
     - talk to human
     - i want human :(
     - can i talk to human
-    - i want to talk to a human
     - i want to speak to human
     - can i talk to a real person?
     - connect me to a real person
@@ -189,3 +179,12 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+- intent: credit_card_info
+  examples: |
+    - I want to know more about the credit cards
+    - give me details about the credit cards
+    - i want to know about your credit cards
+- intent: due_credit_card_bills
+  examples: |
+    - I am not able to pay my credit card bills. What to do now?
+    - I can't pay credit card bills
