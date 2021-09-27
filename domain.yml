@@ -1,26 +1,58 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- credit_card_info
-- affirm
-- return
-- order_product
-- order_cancel
-- order_status
-- greet
-- goodbye
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- nlu_fallback
-- help
-- show_credit_balance
-- human_handoff
-- credit_card_options
-- due_credit_card_bills
+- greet:
+    use_entities: true
+- due_credit_card_bills:
+    use_entities: true
+- credit_card_info:
+    use_entities: true
+- affirm:
+    use_entities: true
+- return:
+    use_entities: true
+- order_product:
+    use_entities: true
+- order_cancel:
+    use_entities: true
+- order_status:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- help:
+    use_entities: true
+- show_credit_balance:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- credit_card_options:
+    use_entities: true
+entities: []
+slots:
+  bill_due_response:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -49,7 +81,7 @@ responses:
       - What did I spend at Target last month? 
       - I need to transfer money
   utter_order_shoes:
-  - text: Sorry, I can't actually help you order the shoes. Please visit our site to buy some nice shoes! I can help you check inventory, see the status of an order or even make a change to that order.
+  - text: Your shoes have been added to the cart. Click on this link to checkout https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
   utter_order_status:
   - text: Based on the latest order from {email}, it looks like your order is currently {status}.
   utter_order_cancel_confirm:
@@ -76,9 +108,16 @@ responses:
   - text: Great, please follow this link to get your Flipkart Axis Bank Credit Card today. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
   utter_credit_unsuccessful:
   - text: Ok maybe some another time.
-
+  utter_low_balance:
+  - text: Looks like you have not paid your bills recently, but don't worry we can help you please tell us what went wrong?
+  utter_due_bill_response_saved:
+  - text: Oh okay, we will help you in every possible way, a flipkart agent will contact you for possible solutions to the problem. In the mean time you can buy this product on EMI
+  utter_ask_due_details:
+  - text: Please tell us your problem in detail, so we can help you.
 actions:
+- utter_ask_due_details
 - utter_credit_promotion
+- utter_due_bill_response_saved
 - utter_greet
 - utter_happy
 - utter_help
@@ -88,3 +127,9 @@ actions:
 - utter_order_status
 - utter_return_confirm
 - utter_return_finish
+forms:
+  pending_bill_response:
+    required_slots:
+      bill_due_response:
+      - type: from_text
+e2e_actions: []

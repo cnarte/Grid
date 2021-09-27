@@ -16,6 +16,8 @@ nlu:
     - goodevening
     - good afternoon
     - yo
+    - i am low on money
+    - I am low on money
 - intent: goodbye
   examples: |
     - good afternoon
@@ -80,6 +82,7 @@ nlu:
     - so saad
     - so sad
     - bad
+    - i am sad
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -91,6 +94,7 @@ nlu:
     - hi flippy i want to know about my credit balance
     - show account balance
     - show me account balance
+    - what is y account balance?
 - intent: order_status
   examples: |
     - Hi flippy what is the status of my last order
@@ -184,7 +188,10 @@ nlu:
     - I want to know more about the credit cards
     - give me details about the credit cards
     - i want to know about your credit cards
+    - i would like to get a credit card
 - intent: due_credit_card_bills
   examples: |
     - I am not able to pay my credit card bills. What to do now?
     - I can't pay credit card bills
+    - ican't pay my credit card bills
+    - i can't pay my bills

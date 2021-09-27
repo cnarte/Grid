@@ -1,34 +1,23 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
-  # - intent: greet
-  # - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-
 - story: sad path 1
   steps:
-  # - intent: greet
-  # - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
-
 - story: sad path 2
   steps:
-  # - intent: greet
-  # - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-
 - story: check_order_status
   steps:
   - intent: greet
@@ -36,7 +25,6 @@ stories:
   - action: utter_help
   - intent: order_status
   - action: utter_order_status
-
 - story: cancel_order_success
   steps:
   - intent: order_status
@@ -45,7 +33,6 @@ stories:
   - action: utter_order_cancel_confirm
   - intent: affirm
   - action: utter_order_cancel_finish
-
 - story: cancel_order_failure
   steps:
   - intent: order_status
@@ -54,41 +41,49 @@ stories:
   - action: utter_order_cancel_confirm
   - intent: deny
   - action: utter_happy
-
-- story: buy_products # expand to add into cart or checkout the product
-  steps:
-  - intent: order_product
-  - action: utter_order_shoes
-
 - story: return_product_success
   steps:
   - intent: return
   - action: utter_return_confirm
   - intent: affirm
   - action: utter_return_finish
-
 - story: return_product_failure
   steps:
   - intent: return
   - action: utter_return_confirm
   - intent: deny
   - action: utter_happy
-
-# search in list of faq questions (not implemented)
-# - story: search_faq
-
-
 - story: credit_card_successful_sell
   steps:
   - intent: credit_card_info
   - action: utter_credit_promotion
   - intent: affirm
   - action: utter_credit_success_forward
-
 - story: credit_card_unsuccessful_sell
   steps:
   - intent: credit_card_info
   - action: utter_credit_promotion
   - intent: deny
   - action: utter_credit_unsuccessful
+- story: pending_bill_reason
+  steps:
+  - intent: due_credit_card_bills
+  - action: pending_bill_response
+  - active_loop: pending_bill_response
+  - slot_was_set:
+    - requested_slot: bill_due_response
+  - slot_was_set:
+    - bill_due_response: I am low on money
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_due_bill_response_saved
 
+- story: Story from Conversation ID bee8485ab95644ffbfa048a3e6247b2e
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: affirm
+  - action: utter_credit_success_forward
