@@ -19,6 +19,8 @@ nlu:
     - HI
     - Hi flippy
     - HI there
+    - i am low on money
+    - I am low on money
 - intent: goodbye
   examples: |
     - good afternoon
@@ -38,12 +40,16 @@ nlu:
     - yes please
 - intent: affirm
   examples: |
+- intent: affirm
+  examples: |
+    - yes
     - y
     - indeed
     - of course
     - that sounds good
     - correct
     - Yes
+    - ok i would love to get one
 - intent: deny
   examples: |
     - no
@@ -228,3 +234,15 @@ nlu:
   examples: |
     - no thanks
     - no.
+- intent: credit_card_info
+  examples: |
+    - I want to know more about the credit cards
+    - give me details about the credit cards
+    - i want to know about your credit cards
+    - i would like to get a credit card
+- intent: due_credit_card_bills
+  examples: |
+    - I am not able to pay my credit card bills. What to do now?
+    - I can't pay credit card bills
+    - ican't pay my credit card bills
+    - i can't pay my bills

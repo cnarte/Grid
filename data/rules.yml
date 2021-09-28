@@ -34,3 +34,20 @@ rules:
   - intent: human_handoff
   - action: utter_ask_handoff
   - action: utter_handoff_options
+
+- rule: Activate form
+  steps:
+  - intent: due_credit_card_bills
+  - action: utter_ask_due_details
+  - action: pending_bill_response
+  - active_loop: pending_bill_response
+
+- rule: Submit form
+  condition:
+  - active_loop: pending_bill_response
+  steps:
+  - action: pending_bill_response
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_due_bill_response_saved

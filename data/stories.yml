@@ -4,6 +4,8 @@ stories:
   steps:
   - intent: offers
   - action: utter_offers
+  - intent: mood_great
+  - action: utter_happy
 - story: sad path 1
   steps:
   - intent: mood_unhappy
@@ -102,3 +104,37 @@ stories:
   - action: utter_more_offers
   - intent: no_thanks
   - action: utter_no_thanks
+- story: credit_card_successful_sell
+  steps:
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: affirm
+  - action: utter_credit_success_forward
+- story: credit_card_unsuccessful_sell
+  steps:
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: deny
+  - action: utter_credit_unsuccessful
+- story: pending_bill_reason
+  steps:
+  - intent: due_credit_card_bills
+  - action: pending_bill_response
+  - active_loop: pending_bill_response
+  - slot_was_set:
+    - requested_slot: bill_due_response
+  - slot_was_set:
+    - bill_due_response: I am low on money
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_due_bill_response_saved
+
+- story: Story from Conversation ID bee8485ab95644ffbfa048a3e6247b2e
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credit_card_info
+  - action: utter_credit_promotion
+  - intent: affirm
+  - action: utter_credit_success_forward
