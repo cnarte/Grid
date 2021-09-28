@@ -134,6 +134,7 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
-
+*.mp3
 # Cython debug symbols
 cython_debug/
+actions/__pycache__
