@@ -5,11 +5,6 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- return:
-    use_entities: true
-- affirm:
-    use_entities: true
-- faq:
 - greet:
     use_entities: true
 - due_credit_card_bills:
@@ -26,7 +21,7 @@ intents:
     use_entities: true
 - order_status:
     use_entities: true
-- greet:
+- faq:
     use_entities: true
 - goodbye:
     use_entities: true
@@ -60,8 +55,6 @@ intents:
     use_entities: true
 - no_thanks:
     use_entities: true
-entities: []
-slots: {}
 - credit_card_options:
     use_entities: true
 entities: []
@@ -104,7 +97,6 @@ responses:
       - What did I spend at Target last month? 
       - I need to transfer money
   utter_order_shoes:
-  - text: Sorry, I can't actually help you order the shoes. Please visit our site to buy some nice shoes! I can help you check inventory, see the status of an order or even make a change to that order.
   - text: Your shoes have been added to the cart. Click on this link to checkout https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
   utter_order_status:
   - text: Based on the latest order from {email}, it looks like your order is currently {status}.
@@ -120,6 +112,24 @@ responses:
   - text: It looks like you want to be transferred to a human agent.
   utter_handoff_options:
   - text: You can call our customer care representative at 18002029898 or visit https://www.flipkart.com/helpcentre
+  utter_credit_promotion:
+  - text: |-
+      You should definitely get a credit card, The discounts, offers, and deals that a credit card offers are unmatched by any other financial products and spell a bonanza for the wise user.
+      Here are some of the advantages of using a credit card:
+      - By using credit card you get to use it now and pay for your purchases later.
+      - Banks and financial institutions often look to credit card usage as a way to gauge a potential loan applicant’s creditworthiness.
+      - Credit cards come packed with offers and incentives to use your card. These range from cash back to rewards point accumulation each time you swipe your card, which can later be redeemed as air miles or used towards paying your outstanding card dues. Lenders also offer discounts on purchases made through a credit card, such as on flight tickets, holidays or large purchases, helping you save.
+      - Credit cards offer additional protection in the form of insurance for card purchases that might be lost, damaged or stolen.
+  utter_credit_success_forward:
+  - text: Great, please follow this link to get your Flipkart Axis Bank Credit Card today. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
+  utter_credit_unsuccessful:
+  - text: Ok maybe some another time.
+  utter_low_balance:
+  - text: Looks like you have not paid your bills recently, but don't worry we can help you please tell us what went wrong?
+  utter_due_bill_response_saved:
+  - text: Oh okay, we will help you in every possible way, a flipkart agent will contact you for possible solutions to the problem. In the mean time you can buy this product on EMI
+  utter_ask_due_details:
+  - text: Please tell us your problem in detail, so we can help you.
   utter_pay_credit_bill:
   - text: Would you like to pay any of the remaining credit balance.
   utter_ask_if_wants_to_pay_now:
@@ -142,26 +152,6 @@ responses:
   - text: Ok then. Enjoy Shopping !!!
 actions:
 - utter_faq
-- utter_greet
-  utter_credit_promotion:
-  - text: |-
-      You should definitely get a credit card, The discounts, offers, and deals that a credit card offers are unmatched by any other financial products and spell a bonanza for the wise user.
-      Here are some of the advantages of using a credit card:
-      - By using credit card you get to use it now and pay for your purchases later.
-      - Banks and financial institutions often look to credit card usage as a way to gauge a potential loan applicant’s creditworthiness.
-      - Credit cards come packed with offers and incentives to use your card. These range from cash back to rewards point accumulation each time you swipe your card, which can later be redeemed as air miles or used towards paying your outstanding card dues. Lenders also offer discounts on purchases made through a credit card, such as on flight tickets, holidays or large purchases, helping you save.
-      - Credit cards offer additional protection in the form of insurance for card purchases that might be lost, damaged or stolen.
-  utter_credit_success_forward:
-  - text: Great, please follow this link to get your Flipkart Axis Bank Credit Card today. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
-  utter_credit_unsuccessful:
-  - text: Ok maybe some another time.
-  utter_low_balance:
-  - text: Looks like you have not paid your bills recently, but don't worry we can help you please tell us what went wrong?
-  utter_due_bill_response_saved:
-  - text: Oh okay, we will help you in every possible way, a flipkart agent will contact you for possible solutions to the problem. In the mean time you can buy this product on EMI
-  utter_ask_due_details:
-  - text: Please tell us your problem in detail, so we can help you.
-actions:
 - utter_ask_due_details
 - utter_credit_promotion
 - utter_due_bill_response_saved
@@ -181,7 +171,6 @@ actions:
 - utter_offers
 - utter_all_offers
 - more_offers
-forms: {}
 forms:
   pending_bill_response:
     required_slots:
