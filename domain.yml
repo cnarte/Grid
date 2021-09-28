@@ -1,0 +1,137 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- return:
+    use_entities: true
+- affirm:
+    use_entities: true
+- faq:
+    use_entities: true
+- order_product:
+    use_entities: true
+- order_cancel:
+    use_entities: true
+- order_status:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- help:
+    use_entities: true
+- show_credit_balance:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- Bill_payment:
+    use_entities: true
+- offers:
+    use_entities: true
+- all_offers:
+    use_entities: true
+- welcome:
+    use_entities: true
+- mobiles:
+    use_entities: true
+- fashion:
+    use_entities: true
+- no_thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_balance:
+  - text: Your balance is rs 10000.
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  - text: um, what did you just say to me?
+  utter_help:
+  - text: |-
+      I can help you with your order, credit cards, offers and customer support. 
+      You can ask me things like: 
+      - What's my account balance? 
+      - Pay off my credit card 
+      - What did I spend at Target last month? 
+      - I need to transfer money
+  utter_order_shoes:
+  - text: Sorry, I can't actually help you order the shoes. Please visit our site to buy some nice shoes! I can help you check inventory, see the status of an order or even make a change to that order.
+  utter_order_status:
+  - text: Based on the latest order from {email}, it looks like your order is currently {status}.
+  utter_order_cancel_confirm:
+  - text: Sorry to hear you want to cancel! Do you want to continue?
+  utter_order_cancel_finish:
+  - text: Ok, I've cancelled the order. If you'd like to reorder, please visit your recent orders in your account history.
+  utter_return_confirm:
+  - text: Sorry for the inconvenience! Are you sure you want to return the product?
+  utter_return_finish:
+  - text: Ok, I've kicked off your return. You should be receiving your refund within 7 days and our wish master will pickup the order soon.
+  utter_ask_handoff:
+  - text: It looks like you want to be transferred to a human agent.
+  utter_handoff_options:
+  - text: You can call our customer care representative at 18002029898 or visit https://www.flipkart.com/helpcentre
+  utter_pay_credit_bill:
+  - text: Would you like to pay any of the remaining credit balance.
+  utter_ask_if_wants_to_pay_now:
+  - text: Do you want to pay any amount of the credit balance.
+  utter_Route_to_credit_paying_site:
+  - text: Okay here you can pay it on this link. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
+  utter_offers:
+  - text: Boom!!! We have got many offers for you today. Would you like to see our offers ?
+  utter_all_offers:
+  - text: Please refer to this page to get exciting deals.    https://www.flipkart.com/offers-store?otracker=nmenu_offer-zone&fm=neo%2Fmerchandising&iid=M_dc1e06e2-7c8a-4e2a-9bfd-ecf811f2532a_1_372UD5BXDFYS_MC.G6ZC4RAJ9OHU&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Top%2BOffers_G6ZC4RAJ9OHU&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=G6ZC4RAJ9OHU
+  utter_welcome:
+  - text: Welcome.
+  utter_more_offers:
+  - text: For more offers please provide the specific section. for e.g, Mobiles, Fashion, electronics.
+  utter_mobiles:
+  - text: Check this section for different mobile offers.  https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_b9afef8f-6975-4c14-aeac-1417b0732f51_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J
+  utter_fashion:
+  - text: Check this section for exciting deals.  https://www.flipkart.com/clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART
+  utter_no_thanks:
+  - text: Ok then. Enjoy Shopping !!!
+actions:
+- utter_faq
+- utter_greet
+- utter_help
+- utter_order_cancel_confirm
+- utter_order_cancel_finish
+- utter_order_shoes
+- utter_order_status
+- utter_return_confirm
+- utter_return_finish
+- utter_pay_credit_bill
+- most_recent_sale_in_future
+- utter_ask_if_wants_to_pay_now
+- utter_Route_to_credit_paying_site
+- utter_offers
+- utter_all_offers
+- more_offers
+forms: {}
+e2e_actions: []

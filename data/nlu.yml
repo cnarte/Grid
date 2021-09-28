@@ -1,0 +1,230 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - HI
+    - Hi flippy
+    - HI there
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: all_offers
+  examples: |
+    - yes
+    - yes please
+- intent: affirm
+  examples: |
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - bad
+    - i am sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: show_credit_balance
+  examples: |
+    - hi flippy i want to know about my credit balance
+    - show account balance
+    - show me account balance
+    - what is y account balance?
+    - what is my credit balance
+    - can you tell me my credit balance
+    - Hi what is the balance
+- intent: order_status
+  examples: |
+    - Hi flippy what is the status of my last order
+    - what is my order status
+    - what's the update on my orders
+    - when my orders will be delivered?
+    - What is my order status?
+    - when will they get here
+    - I'd like to check the status of my order pls
+    - check status
+    - I'd like an update on my order
+    - Check status of my order
+    - I haven't received my order yet, can we check that?
+    - where is my order?
+    - I want to check the status of my order
+    - actually can I check the status of my order
+    - Hi what is the status of my orders?
+- intent: order_cancel
+  examples: |
+    - i'd like to cancel my order
+    - cancel my order
+    - I changed my mind on my order
+    - i want to cancel my orders
+    - Can you cancel my last order
+- intent: order_product
+  examples: |
+    - i want to buy shoes
+    - hey, i want to purchase new shoes
+    - how about I place an order of shoes
+    - i want to buy a pair of shoes
+- intent: return
+  examples: |
+    - start a return
+    - I don't want my shoes anymore
+    - how do I return these?
+    - return some shoes
+    - Which items are available to return?
+    - Start a return
+    - Okay. I would like to return some shoes I bought
+    - yeah I want to return something
+    - hey i want to return my shoes
+- intent: faq/payment_methods
+  examples: |
+    - what kind of payment methods do you offer?
+    - how do I pay
+- intent: faq/promotions
+  examples: |
+    - what kind of deals do you have
+    - are you running anything for black friday
+- intent: help
+  examples: |
+    - help
+    - what can you do?
+    - what can I ask you?
+    - what do you do?
+    - what can you help me with?
+    - help me
+    - help, what do you do
+    - how do I use this
+    - how can you help me
+    - What are the things that you can do?
+    - What else can you help me with?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help please
+    - help pls
+    - help?
+    - hep me
+- intent: human_handoff
+  examples: |
+    - handoff
+    - operator
+    - I want a human
+    - can I speak to an agent
+    - real agent please
+    - real human
+    - chat with a live agent
+    - give me a person please
+    - i want to talk to a human
+    - transfer to a human
+    - Please give me to a human
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
+- intent: Bill_payment
+  examples: |
+    - Pay my bill
+- intent: offers
+  examples: |
+    - offers
+    - Offers in flipkart
+    - offers in flipkart
+    - offers in flipkart.
+    - Offers on Flipkart
+    - offer
+- intent: welcome
+  examples: |
+    - Thanks
+    - thanks
+    - thank you
+    - thnaks
+- intent: mobiles
+  examples: |
+    - mobiles
+    - https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_2d890be8-baf3-4250-85ec-bc5eed48f94b_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J
+- intent: fashion
+  examples: |
+    - fashion
+    - fashin
+- intent: no_thanks
+  examples: |
+    - no thanks
+    - no.

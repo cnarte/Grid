@@ -1,0 +1,9 @@
+https://forum.rasa.com/t/attributeerror-sanic-object-has-no-attribute-auth/46837/41
+
+On a fresh Conda environment: 
+pip install rasa==2.8.2 
+pip install rasa-sdk==2.8.1 
+pip install rasa-x==0.39.3 --extra-index-url https://pypi.rasa.com/simple 
+pip3 install SQLAlchemy==1.3.22 
+pip install sanic-jwt==1.6.0
+
