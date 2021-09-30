@@ -1,0 +1,10 @@
+[
+  {
+    "text": "what kind of deals do you have",
+    "intent_response_key_target": "faq/promotions",
+    "intent_response_key_prediction": {
+      "name": "faq/payment_methods",
+      "confidence": 0.9999984502792358
+    }
+  }
+]

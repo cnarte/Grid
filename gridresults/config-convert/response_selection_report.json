@@ -1,0 +1,33 @@
+{
+  "faq/payment_methods": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2,
+    "confused_with": {
+      "faq/promotions": 1
+    }
+  },
+  "faq/promotions": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2,
+    "confused_with": {
+      "faq/payment_methods": 1
+    }
+  },
+  "accuracy": 0.5,
+  "macro avg": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 4
+  },
+  "weighted avg": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 4
+  }
+}

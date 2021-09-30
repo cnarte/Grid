@@ -1,25 +1,6 @@
 version: "2.0"
 stories:
-- story: happy path
-  steps:
-  - intent: offers
-  - action: utter_offers
-  - intent: mood_great
-  - action: utter_happy
-- story: sad path 1
-  steps:
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: sad path 2
-  steps:
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+
 - story: check_order_status
   steps:
   - intent: greet
@@ -27,6 +8,7 @@ stories:
   - action: utter_help
   - intent: order_status
   - action: utter_order_status
+
 - story: cancel_order_success
   steps:
   - intent: order_status
@@ -35,6 +17,7 @@ stories:
   - action: utter_order_cancel_confirm
   - intent: affirm
   - action: utter_order_cancel_finish
+
 - story: cancel_order_failure
   steps:
   - intent: order_status
@@ -43,98 +26,100 @@ stories:
   - action: utter_order_cancel_confirm
   - intent: deny
   - action: utter_happy
+
 - story: buy_products
   steps:
   - intent: order_product
-  - action: utter_order_shoes
+  - action: utter_order_item
+
 - story: return_product_success
   steps:
   - intent: return
   - action: utter_return_confirm
   - intent: affirm
   - action: utter_return_finish
+
 - story: return_product_failure
   steps:
   - intent: return
   - action: utter_return_confirm
   - intent: deny
   - action: utter_happy
-- story: Story from Conversation ID 77da01ddc7124de9afdffb67f121e2d7
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_help
-  - intent: order_cancel
-  - action: utter_order_cancel_confirm
-  - intent: affirm
-  - action: utter_return_finish
-- story: Story from Conversation ID 686820c3b55942b2913fcf7cf6dcbdb2
-  steps:
-  - intent: order_status
-- story: Story from Conversation ID 5ef8d8f06ebd4ee2b4bd288c1f6cbca3
-  steps:
-  - action: utter_balance
-- story: Story from Conversation ID 9a297779c66340c3b67e231abfa5c24f
-  steps:
-  - intent: offers
-  - action: utter_offers
-  - intent: all_offers
-  - action: utter_all_offers
-- story: ask_offers
-  steps:
-  - intent: offers
-  - action: utter_offers
-  - intent: all_offers
-  - action: utter_all_offers
-  - intent: welcome
-  - action: utter_welcome
-  - action: utter_more_offers
-  - intent: mobiles
-  - action: utter_mobiles
-  - intent: fashion
-  - action: utter_fashion
-- story: Story from Conversation ID 2e73e68c224f4f029bb6c9bf44202dab
-  steps:
-  - intent: offers
-  - action: utter_offers
-  - intent: all_offers
-  - action: utter_all_offers
-  - intent: welcome
-  - action: utter_welcome
-  - action: utter_more_offers
-  - intent: no_thanks
-  - action: utter_no_thanks
+
+
+# - story: ask_offers
+#   steps:
+#   - intent: offers
+#   - action: utter_offers
+#   - intent: all_offers
+#   - action: utter_all_offers
+#   - intent: welcome
+#   - action: utter_welcome
+#   - action: utter_more_offers
+#   - intent: mobiles
+#   - action: utter_mobiles
+#   - intent: fashion
+#   - action: utter_fashion
+  
+# - story: Story from Conversation ID 2e73e68c224f4f029bb6c9bf44202dab
+#   steps:
+#   - intent: offers
+#   - action: utter_offers
+#   - intent: all_offers
+#   - action: utter_all_offers
+#   - intent: welcome
+#   - action: utter_welcome
+#   - action: utter_more_offers
+#   - intent: no_thanks
+#   - action: utter_no_thanks
+
 - story: credit_card_successful_sell
   steps:
   - intent: credit_card_info
   - action: utter_credit_promotion
   - intent: affirm
   - action: utter_credit_success_forward
+
 - story: credit_card_unsuccessful_sell
   steps:
   - intent: credit_card_info
   - action: utter_credit_promotion
   - intent: deny
   - action: utter_credit_unsuccessful
+
 - story: pending_bill_reason
   steps:
-  - intent: due_credit_card_bills
   - action: pending_bill_response
   - active_loop: pending_bill_response
   - slot_was_set:
     - requested_slot: bill_due_response
   - slot_was_set:
-    - bill_due_response: I am low on money
+    - bill_due_response: I am low on money  # how to add more?
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: utter_due_bill_response_saved
 
-- story: Story from Conversation ID bee8485ab95644ffbfa048a3e6247b2e
+
+
+- story: Demo_story
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: credit_card_info
+  - action: utter_help
+  - intent: return
+  - action: utter_return_confirm
+  - intent: affirm
+  - action: utter_return_finish
+  - intent: affirm
+  - action: utter_choose_payment_option
+  - intent: choosen_payment_choice
   - action: utter_credit_promotion
   - intent: affirm
-  - action: utter_credit_success_forward
+  - action: utter_happy
+  - action: utter_offers
+  - intent: affirm
+  - action: action_recommended_product
+  - intent: affirm
+  - action: utter_order_item
+

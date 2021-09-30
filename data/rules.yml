@@ -51,3 +51,19 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: utter_due_bill_response_saved
+
+# - rule: Activate form
+#   steps:
+#   # - intent: 
+#   - action: payment_choice
+#   - active_loop: payment_choice
+
+# - rule: Submit form
+#   condition:
+#   - active_loop: payment_choice
+#   steps:
+#   - action: payment_choice
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_payment_gateway

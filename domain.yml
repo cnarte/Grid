@@ -1,74 +1,47 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- due_credit_card_bills:
-    use_entities: true
-- credit_card_info:
-    use_entities: true
-- affirm:
-    use_entities: true
-- return:
-    use_entities: true
-- order_product:
-    use_entities: true
-- order_cancel:
-    use_entities: true
-- order_status:
-    use_entities: true
+- greet
+- return
+- affirm
 - faq:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
-- help:
-    use_entities: true
-- show_credit_balance:
-    use_entities: true
-- human_handoff:
-    use_entities: true
-- Bill_payment:
-    use_entities: true
-- offers:
-    use_entities: true
-- all_offers:
-    use_entities: true
-- welcome:
-    use_entities: true
-- mobiles:
-    use_entities: true
-- fashion:
-    use_entities: true
-- no_thanks:
-    use_entities: true
-- credit_card_options:
-    use_entities: true
-entities: []
+    is_retrieval_intent: true
+- due_credit_card_bills
+- credit_card_info
+- order_product
+- order_cancel
+- order_status
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- nlu_fallback
+- help
+- show_credit_balance
+- human_handoff
+- Bill_payment
+- offers
+- all_offers
+- welcome
+- mobiles
+- fashion
+- no_thanks
+- credit_card_options
+- choosen_payment_choice
 slots:
   bill_due_response:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: false
   requested_slot:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
-    initial_value: null
-    auto_fill: true
+    type: unfeaturized
     influence_conversation: false
+  payment_response:
+    type: text
+  recommended_product:
+    type: text
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -78,13 +51,13 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
-  - text: Great, carry on!
+  - text: Great!
   utter_goodbye:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_balance:
-  - text: Your balance is rs 10000.
+  - text: Your balance is 10000 INR.
   utter_default:
   - text: I didn't quite understand that. Could you rephrase?
   - text: um, what did you just say to me?
@@ -96,8 +69,8 @@ responses:
       - Pay off my credit card 
       - What did I spend at Target last month? 
       - I need to transfer money
-  utter_order_shoes:
-  - text: Your shoes have been added to the cart. Click on this link to checkout https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
+  utter_order_item:
+  - text: Your product has been added to the cart. Click on this link to checkout https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
   utter_order_status:
   - text: Based on the latest order from {email}, it looks like your order is currently {status}.
   utter_order_cancel_confirm:
@@ -107,19 +80,28 @@ responses:
   utter_return_confirm:
   - text: Sorry for the inconvenience! Are you sure you want to return the product?
   utter_return_finish:
-  - text: Ok, I've kicked off your return. You should be receiving your refund within 7 days and our wish master will pickup the order soon.
+  - text: Ok, I've kicked off your return. You should be receiving your refund within 7 days and our wish master will pickup the order soon. Would you like to buy the shirt of XL size.
   utter_ask_handoff:
   - text: It looks like you want to be transferred to a human agent.
   utter_handoff_options:
   - text: You can call our customer care representative at 18002029898 or visit https://www.flipkart.com/helpcentre
+  utter_choose_payment_option:
+  - text: |-
+      Please select the payment method 
+      - Cash on delivery
+      - Debit Card
+      - Credit Card
+      - UPI
+      - Net Banking
   utter_credit_promotion:
   - text: |-
-      You should definitely get a credit card, The discounts, offers, and deals that a credit card offers are unmatched by any other financial products and spell a bonanza for the wise user.
+      Have you heard that Flipkart is starting its credit card service for selective coustomers. 
       Here are some of the advantages of using a credit card:
       - By using credit card you get to use it now and pay for your purchases later.
       - Banks and financial institutions often look to credit card usage as a way to gauge a potential loan applicant’s creditworthiness.
       - Credit cards come packed with offers and incentives to use your card. These range from cash back to rewards point accumulation each time you swipe your card, which can later be redeemed as air miles or used towards paying your outstanding card dues. Lenders also offer discounts on purchases made through a credit card, such as on flight tickets, holidays or large purchases, helping you save.
       - Credit cards offer additional protection in the form of insurance for card purchases that might be lost, damaged or stolen.
+      Would you like to apply for one today? It's completely paperless.
   utter_credit_success_forward:
   - text: Great, please follow this link to get your Flipkart Axis Bank Credit Card today. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
   utter_credit_unsuccessful:
@@ -137,43 +119,52 @@ responses:
   utter_Route_to_credit_paying_site:
   - text: Okay here you can pay it on this link. https://www.flipkart.com/flipkart-axis-bank-credit-card-store
   utter_offers:
-  - text: Boom!!! We have got many offers for you today. Would you like to see our offers ?
-  utter_all_offers:
-  - text: Please refer to this page to get exciting deals.    https://www.flipkart.com/offers-store?otracker=nmenu_offer-zone&fm=neo%2Fmerchandising&iid=M_dc1e06e2-7c8a-4e2a-9bfd-ecf811f2532a_1_372UD5BXDFYS_MC.G6ZC4RAJ9OHU&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Top%2BOffers_G6ZC4RAJ9OHU&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=G6ZC4RAJ9OHU
-  utter_welcome:
-  - text: Welcome.
-  utter_more_offers:
-  - text: For more offers please provide the specific section. for e.g, Mobiles, Fashion, electronics.
-  utter_mobiles:
-  - text: Check this section for different mobile offers.  https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_b9afef8f-6975-4c14-aeac-1417b0732f51_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J
-  utter_fashion:
-  - text: Check this section for exciting deals.  https://www.flipkart.com/clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART
-  utter_no_thanks:
-  - text: Ok then. Enjoy Shopping !!!
+  - text: Big billion days are just around the corrner have a look at exclusive deals beforehand and make your wishlist. 
+  utter_purcase_histoy_recommendation:
+  - text: You might be interested in buying {recommended_product}
+#   utter_all_offers:
+#   - text: Please refer to this page to get exciting deals.    https://www.flipkart.com/offers-store?otracker=nmenu_offer-zone&fm=neo%2Fmerchandising&iid=M_dc1e06e2-7c8a-4e2a-9bfd-ecf811f2532a_1_372UD5BXDFYS_MC.G6ZC4RAJ9OHU&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Top%2BOffers_G6ZC4RAJ9OHU&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=G6ZC4RAJ9OHU
+#   utter_welcome:
+#   - text: Welcome.
+#   utter_more_offers:
+#   - text: For more offers please provide the specific section. for e.g, Mobiles, Fashion, electronics.
+#   utter_mobiles:
+#   - text: Check this section for different mobile offers.  https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_b9afef8f-6975-4c14-aeac-1417b0732f51_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J
+#   utter_fashion:
+#   - text: Check this section for exciting deals.  https://www.flipkart.com/clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART
+#   utter_no_thanks:
+#   - text: Ok then. Enjoy Shopping !!!
+  utter_payment_gateway:
+  - text: Click on this link to head to the payment gateway https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
 actions:
-- utter_faq
+- more_offers
+- most_recent_sale_in_future
+- utter_Route_to_credit_paying_site
+- utter_all_offers
 - utter_ask_due_details
+- utter_ask_if_wants_to_pay_now
+- utter_choose_payment_option
 - utter_credit_promotion
 - utter_due_bill_response_saved
+- utter_faq
 - utter_greet
 - utter_happy
 - utter_help
+- utter_offers
 - utter_order_cancel_confirm
 - utter_order_cancel_finish
 - utter_order_shoes
 - utter_order_status
+- utter_pay_credit_bill
 - utter_return_confirm
 - utter_return_finish
-- utter_pay_credit_bill
-- most_recent_sale_in_future
-- utter_ask_if_wants_to_pay_now
-- utter_Route_to_credit_paying_site
-- utter_offers
-- utter_all_offers
-- more_offers
+- action_recommended_product
 forms:
   pending_bill_response:
     required_slots:
       bill_due_response:
       - type: from_text
-e2e_actions: []
+  
+  payment_choice:
+    payment_response:
+    - type: from_text

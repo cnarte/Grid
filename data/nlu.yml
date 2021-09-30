@@ -34,12 +34,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-- intent: all_offers
-  examples: |
-    - yes
-    - yes please
-- intent: affirm
-  examples: |
 - intent: affirm
   examples: |
     - yes
@@ -50,6 +44,7 @@ nlu:
     - correct
     - Yes
     - ok i would love to get one
+    - yes please
 - intent: deny
   examples: |
     - no
@@ -149,6 +144,7 @@ nlu:
     - Okay. I would like to return some shoes I bought
     - yeah I want to return something
     - hey i want to return my shoes
+    - i want to reeturn the y shirt
 - intent: faq/payment_methods
   examples: |
     - what kind of payment methods do you offer?
@@ -246,3 +242,11 @@ nlu:
     - I can't pay credit card bills
     - ican't pay my credit card bills
     - i can't pay my bills
+- intent: choosen_payment_choice
+  examples: |
+    - Credit Card
+    - Debit Card
+    - UPI
+    - Cash on delivery
+    - Net Banking 
+    - Internet Banking

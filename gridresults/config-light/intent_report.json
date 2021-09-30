@@ -1,0 +1,215 @@
+{
+  "bot_challenge": {
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1-score": 0.75,
+    "support": 4,
+    "confused_with": {
+      "human_handoff": 1
+    }
+  },
+  "mood_great": {
+    "precision": 0.5714285714285714,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.5714285714285714,
+    "support": 14,
+    "confused_with": {
+      "mood_unhappy": 2,
+      "greet": 1
+    }
+  },
+  "mobiles": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "due_credit_card_bills": 1,
+      "greet": 1
+    }
+  },
+  "fashion": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 0.625,
+    "recall": 0.45454545454545453,
+    "f1-score": 0.5263157894736842,
+    "support": 11,
+    "confused_with": {
+      "affirm": 2,
+      "mood_great": 2
+    }
+  },
+  "credit_card_info": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 4,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 0.8125,
+    "recall": 0.8125,
+    "f1-score": 0.8125,
+    "support": 16,
+    "confused_with": {
+      "greet": 1,
+      "order_status": 1
+    }
+  },
+  "return": {
+    "precision": 0.7692307692307693,
+    "recall": 1.0,
+    "f1-score": 0.8695652173913044,
+    "support": 10,
+    "confused_with": {}
+  },
+  "order_cancel": {
+    "precision": 0.6666666666666666,
+    "recall": 0.8,
+    "f1-score": 0.7272727272727272,
+    "support": 5,
+    "confused_with": {
+      "order_status": 1
+    }
+  },
+  "help": {
+    "precision": 0.7916666666666666,
+    "recall": 0.95,
+    "f1-score": 0.8636363636363635,
+    "support": 20,
+    "confused_with": {
+      "return": 1
+    }
+  },
+  "greet": {
+    "precision": 0.6842105263157895,
+    "recall": 0.6842105263157895,
+    "f1-score": 0.6842105263157895,
+    "support": 19,
+    "confused_with": {
+      "human_handoff": 1,
+      "help": 1
+    }
+  },
+  "due_credit_card_bills": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 4,
+    "confused_with": {}
+  },
+  "order_status": {
+    "precision": 0.75,
+    "recall": 0.8,
+    "f1-score": 0.7741935483870969,
+    "support": 15,
+    "confused_with": {
+      "order_cancel": 2,
+      "greet": 1
+    }
+  },
+  "no_thanks": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "welcome": 1,
+      "deny": 1
+    }
+  },
+  "deny": {
+    "precision": 0.25,
+    "recall": 0.14285714285714285,
+    "f1-score": 0.18181818181818182,
+    "support": 7,
+    "confused_with": {
+      "no_thanks": 2,
+      "human_handoff": 1,
+      "help": 1
+    }
+  },
+  "order_product": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 4,
+    "confused_with": {
+      "return": 1,
+      "order_status": 1
+    }
+  },
+  "human_handoff": {
+    "precision": 0.84,
+    "recall": 0.875,
+    "f1-score": 0.8571428571428572,
+    "support": 24,
+    "confused_with": {
+      "bot_challenge": 1,
+      "offers": 1
+    }
+  },
+  "welcome": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 4,
+    "confused_with": {}
+  },
+  "show_credit_balance": {
+    "precision": 1.0,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.923076923076923,
+    "support": 7,
+    "confused_with": {
+      "credit_card_info": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4,
+    "support": 9,
+    "confused_with": {
+      "mood_great": 2,
+      "offers": 1
+    }
+  },
+  "faq": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {
+      "help": 2,
+      "return": 1,
+      "offers": 1
+    }
+  },
+  "offers": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 6,
+    "confused_with": {}
+  },
+  "accuracy": 0.7253886010362695,
+  "macro avg": {
+    "precision": 0.6398804484988696,
+    "recall": 0.6605008129828704,
+    "f1-score": 0.639749729058038,
+    "support": 193
+  },
+  "weighted avg": {
+    "precision": 0.6994506443470174,
+    "recall": 0.7253886010362695,
+    "f1-score": 0.7049023193370393,
+    "support": 193
+  }
+}

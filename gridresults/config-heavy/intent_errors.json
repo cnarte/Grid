@@ -1,0 +1,442 @@
+[
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.2848823666572571
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5931465029716492
+    }
+  },
+  {
+    "text": "goodevening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2999497056007385
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9959865212440491
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3870346248149872
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.40865233540534973
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6294960379600525
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8117079734802246
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3967445492744446
+    }
+  },
+  {
+    "text": "Yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5322607755661011
+    }
+  },
+  {
+    "text": "yes please",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.7037742137908936
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.3644602298736572
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7283703088760376
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.28274768590927124
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.2810245454311371
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.841477632522583
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.43907245993614197
+    }
+  },
+  {
+    "text": "hi flippy i want to know about my credit balance",
+    "intent": "show_credit_balance",
+    "intent_prediction": {
+      "name": "credit_card_info",
+      "confidence": 0.477189838886261
+    }
+  },
+  {
+    "text": "I changed my mind on my order",
+    "intent": "order_cancel",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.7649469375610352
+    }
+  },
+  {
+    "text": "how about I place an order of shoes",
+    "intent": "order_product",
+    "intent_prediction": {
+      "name": "credit_card_info",
+      "confidence": 0.33425086736679077
+    }
+  },
+  {
+    "text": "how do I pay",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "due_credit_card_bills",
+      "confidence": 0.5659285187721252
+    }
+  },
+  {
+    "text": "are you running anything for black friday",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5715005993843079
+    }
+  },
+  {
+    "text": "operator",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3504849076271057
+    }
+  },
+  {
+    "text": "https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_2d890be8-baf3-4250-85ec-bc5eed48f94b_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J",
+    "intent": "mobiles",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.13738083839416504
+    }
+  },
+  {
+    "text": "no.",
+    "intent": "no_thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9855843186378479
+    }
+  },
+  {
+    "text": "i would like to get a credit card",
+    "intent": "credit_card_info",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.431879460811615
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.26668617129325867
+    }
+  },
+  {
+    "text": "HI",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.23812685906887054
+    }
+  },
+  {
+    "text": "Hi flippy",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "show_credit_balance",
+      "confidence": 0.6670111417770386
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9991587400436401
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.380536288022995
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.39850014448165894
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "order_cancel",
+      "confidence": 0.2200109213590622
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "show_credit_balance",
+      "confidence": 0.23584730923175812
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8116995096206665
+    }
+  },
+  {
+    "text": "ok i would love to get one",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "credit_card_info",
+      "confidence": 0.8761477470397949
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "no_thanks",
+      "confidence": 0.9101735949516296
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6087348461151123
+    }
+  },
+  {
+    "text": "no way",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "no_thanks",
+      "confidence": 0.7524427771568298
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.42478254437446594
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5446448922157288
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2277047038078308
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.21295234560966492
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5384699106216431
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.38436415791511536
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3898178040981293
+    }
+  },
+  {
+    "text": "I don't want my shoes anymore",
+    "intent": "return",
+    "intent_prediction": {
+      "name": "order_product",
+      "confidence": 0.6809291839599609
+    }
+  },
+  {
+    "text": "what kind of payment methods do you offer?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.861426591873169
+    }
+  },
+  {
+    "text": "what kind of deals do you have",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.9748510718345642
+    }
+  },
+  {
+    "text": "come back",
+    "intent": "help",
+    "intent_prediction": {
+      "name": "show_credit_balance",
+      "confidence": 0.3255115747451782
+    }
+  },
+  {
+    "text": "handoff",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "offers",
+      "confidence": 0.30479007959365845
+    }
+  },
+  {
+    "text": "mobiles",
+    "intent": "mobiles",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.41489604115486145
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "no_thanks",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.7979909181594849
+    }
+  },
+  {
+    "text": "I want to know more about the credit cards",
+    "intent": "credit_card_info",
+    "intent_prediction": {
+      "name": "show_credit_balance",
+      "confidence": 0.4050522744655609
+    }
+  },
+  {
+    "text": "i want to know about your credit cards",
+    "intent": "credit_card_info",
+    "intent_prediction": {
+      "name": "show_credit_balance",
+      "confidence": 0.5193124413490295
+    }
+  }
+]

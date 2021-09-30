@@ -1,0 +1,18 @@
+[
+  {
+    "text": "how do I pay",
+    "intent_response_key_target": "faq/payment_methods",
+    "intent_response_key_prediction": {
+      "name": "faq/promotions",
+      "confidence": 0.9994010925292969
+    }
+  },
+  {
+    "text": "what kind of deals do you have",
+    "intent_response_key_target": "faq/promotions",
+    "intent_response_key_prediction": {
+      "name": "faq/payment_methods",
+      "confidence": 1.0
+    }
+  }
+]

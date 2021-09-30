@@ -1,0 +1,426 @@
+[
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6404844522476196
+    }
+  },
+  {
+    "text": "hey dude",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.20107361674308777
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.34935814142227173
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9978035688400269
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8776998519897461
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7359397411346436
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2699509263038635
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "offers",
+      "confidence": 0.3133662939071655
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8599830269813538
+    }
+  },
+  {
+    "text": "ok i would love to get one",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.3023033142089844
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4627058506011963
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.7196997404098511
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6580105423927307
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.22101840376853943
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7651926279067993
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.2991386651992798
+    }
+  },
+  {
+    "text": "hi flippy i want to know about my credit balance",
+    "intent": "show_credit_balance",
+    "intent_prediction": {
+      "name": "credit_card_info",
+      "confidence": 0.620212733745575
+    }
+  },
+  {
+    "text": "I changed my mind on my order",
+    "intent": "order_cancel",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.9299933314323425
+    }
+  },
+  {
+    "text": "hey, i want to purchase new shoes",
+    "intent": "order_product",
+    "intent_prediction": {
+      "name": "return",
+      "confidence": 0.7871803045272827
+    }
+  },
+  {
+    "text": "what kind of payment methods do you offer?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "offers",
+      "confidence": 0.4061413109302521
+    }
+  },
+  {
+    "text": "what kind of deals do you have",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.9144536256790161
+    }
+  },
+  {
+    "text": "handoff",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "offers",
+      "confidence": 0.3636488914489746
+    }
+  },
+  {
+    "text": "I want a human",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.4271499514579773
+    }
+  },
+  {
+    "text": "https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_2d890be8-baf3-4250-85ec-bc5eed48f94b_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L0_view-all&cid=ZRQ4DKH28K8J",
+    "intent": "mobiles",
+    "intent_prediction": {
+      "name": "due_credit_card_bills",
+      "confidence": 0.18312840163707733
+    }
+  },
+  {
+    "text": "no.",
+    "intent": "no_thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9798131585121155
+    }
+  },
+  {
+    "text": "hello",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.7267895340919495
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.2747436761856079
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9959040880203247
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8335356712341309
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.21620506048202515
+    }
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8541703820228577
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7935131192207336
+    }
+  },
+  {
+    "text": "yes please",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.5025780200958252
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "no_thanks",
+      "confidence": 0.8517775535583496
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "no_thanks",
+      "confidence": 0.3832683265209198
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.28052833676338196
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.1741524487733841
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9044985771179199
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4628686308860779
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.2660040259361267
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.47577643394470215
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8549907803535461
+    }
+  },
+  {
+    "text": "are you a human?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.808203935623169
+    }
+  },
+  {
+    "text": "when my orders will be delivered?",
+    "intent": "order_status",
+    "intent_prediction": {
+      "name": "order_cancel",
+      "confidence": 0.7369855046272278
+    }
+  },
+  {
+    "text": "when will they get here",
+    "intent": "order_status",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8795911073684692
+    }
+  },
+  {
+    "text": "I'd like an update on my order",
+    "intent": "order_status",
+    "intent_prediction": {
+      "name": "order_cancel",
+      "confidence": 0.8395840525627136
+    }
+  },
+  {
+    "text": "how about I place an order of shoes",
+    "intent": "order_product",
+    "intent_prediction": {
+      "name": "order_status",
+      "confidence": 0.6546231508255005
+    }
+  },
+  {
+    "text": "how do I pay",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "return",
+      "confidence": 0.399742990732193
+    }
+  },
+  {
+    "text": "are you running anything for black friday",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "help",
+      "confidence": 0.39342325925827026
+    }
+  },
+  {
+    "text": "how do I use this",
+    "intent": "help",
+    "intent_prediction": {
+      "name": "return",
+      "confidence": 0.39594125747680664
+    }
+  },
+  {
+    "text": "operator",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5800600647926331
+    }
+  },
+  {
+    "text": "mobiles",
+    "intent": "mobiles",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8818371891975403
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "no_thanks",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.9441850781440735
+    }
+  }
+]
