@@ -65,10 +65,12 @@ responses:
   - text: |-
       I can help you with your order, credit cards, offers and customer support. 
       You can ask me things like: 
-      - What's my account balance? 
-      - Pay off my credit card 
-      - What did I spend at Target last month? 
-      - I need to transfer money
+      - To buy something
+      - Pay off credit card bills
+      - cancel an order
+      - Show offers
+      - return a product
+      
   utter_order_item:
   - text: Your product has been added to the cart. Click on this link to checkout https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click
   utter_order_status:
