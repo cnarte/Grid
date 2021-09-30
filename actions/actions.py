@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-
+from rasa_sdk.events import SlotSet
 
 class ActionHelloWorld(Action):
 
@@ -24,8 +24,8 @@ class ActionHelloWorld(Action):
         product = self.get_product()
         dispatcher.utter_message(text=f"You might be interested in buying {product}")
 
-        return [SlotSet("recommended_product", product)]
+        return [SlotSet('recommended_product', product)]
     
-    def get_product():
+    def get_product(self):
         #geting product from recomender system
         return "Apple M1 chip macbook is at 70% Discount get it prebooked now!!!"

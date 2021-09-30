@@ -47,31 +47,7 @@ stories:
   - action: utter_happy
 
 
-# - story: ask_offers
-#   steps:
-#   - intent: offers
-#   - action: utter_offers
-#   - intent: all_offers
-#   - action: utter_all_offers
-#   - intent: welcome
-#   - action: utter_welcome
-#   - action: utter_more_offers
-#   - intent: mobiles
-#   - action: utter_mobiles
-#   - intent: fashion
-#   - action: utter_fashion
-  
-# - story: Story from Conversation ID 2e73e68c224f4f029bb6c9bf44202dab
-#   steps:
-#   - intent: offers
-#   - action: utter_offers
-#   - intent: all_offers
-#   - action: utter_all_offers
-#   - intent: welcome
-#   - action: utter_welcome
-#   - action: utter_more_offers
-#   - intent: no_thanks
-#   - action: utter_no_thanks
+
 
 - story: credit_card_successful_sell
   steps:
@@ -94,7 +70,7 @@ stories:
   - slot_was_set:
     - requested_slot: bill_due_response
   - slot_was_set:
-    - bill_due_response: I am low on money  # how to add more?
+    - bill_due_response: I am low on money 
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
